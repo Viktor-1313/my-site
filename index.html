@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Гуляй, Вася!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    .screen {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
+    .screen.active {
+      display: block;
+    }
+    .screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .hotspot {
+      position: absolute;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    .hotspot:hover {
+      background-color: rgba(0, 255, 0, 0.3);
+      border: 1px solid rgba(0, 255, 0, 0.6);
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+<!-- Экран 1 -->
+<div id="screen1" class="screen active">
+  <img src="images/Registration.png" alt="Registration">
+  <!-- Кнопка "Регистрация" -->
+  <button class="hotspot" style="top: 81.2%; left: 50%; transform: translate(-50%, -50%); width: 17%; height: 6%;" onclick="showScreen(2)"></button>
+</div>
+<!-- Экран 2 -->
+<div id="screen2" class="screen">
+  <img src="images/log in to the app.png" alt="Log in to the app">
+  <!-- Кнопка "Гоу ходить" -->
+  <button class="hotspot" style="top: 91.2%; left: 50%; transform: translate(-50%, -50%); width: 17%; height: 6%;" onclick="showScreen(3)"></button>
+</div>
+<!-- Экран 3 -->
+<div id="screen3" class="screen">
+  <img src="images/choose a situation.png" alt="Choose a situation">
+  <!-- Кнопка "настройки" -->
+  <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(14)"></button>
+  <!-- Кнопка 1 -->
+  <button class="hotspot" style="top: 10.5%; left: 50%; transform: translateX(-50%); width: 20%; height: 6%;" onclick="showScreen(4)"></button>
+  <!-- Кнопка 2 -->
+  <button class="hotspot" style="top: 19.5%; left: 50%; transform: translateX(-50%); width: 20%; height: 6%;" onclick="showScreen(5)"></button>
+  <!-- Кнопка 3 -->
+  <button class="hotspot" style="top: 30%; left: 50%; transform: translateX(-50%); width: 20%; height: 6%;" onclick="showScreen(6)"></button>
+  <!-- Кнопка 4 -->
+  <button class="hotspot" style="top: 40%; left: 50%; transform: translateX(-50%); width: 20%; height: 6%;" onclick="showScreen(7)"></button>
+  <!-- Кнопка 5 (Создать карту) -->
+  <button class="hotspot" style="top: 50%; left: 50%; transform: translateX(-50%); width: 20%; height: 6%;" onclick="window.location.href='https://yandex.ru/maps/2/saint-petersburg/?ll=30.314997%2C59.938784&utm_source=ntp_chrome&z=11 '"></button>
+  <!-- Кнопка 6 -->
+  <button class="hotspot" style="top: 60%; left: 50%; transform: translateX(-50%); width: 20%; height: 6%;" onclick="showScreen(8)"></button>
+  <!-- Кнопка "Потерял телефон" -->
+  <button class="hotspot" style="bottom: 5%; left: 50%; transform: translateX(-50%); width: 20%; height: 6%;" onclick="showScreen(13)"></button>
+</div>
+<!-- Экран 4 -->
+<div id="screen4" class="screen">
+  <img src="images/Save me from my boss.png" alt="Save me from my boss">
+  <!-- Назад -->
+  <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(3)"></button>
+  <!-- Scam -->
+  <button class="hotspot" style="top: 91.2%; left: 50%; transform: translate(-50%, -50%); width: 17%; height: 6%;" onclick="showScreen(9)"></button>
+</div>
+<!-- Экран 5 -->
+<div id="screen5" class="screen">
+  <img src="images/required time.png" alt="Required time">
+  <!-- Назад -->
+  <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(3)"></button>
+  <!-- Scam -->
+  <button class="hotspot" style="top: 91.2%; left: 50%; transform: translate(-50%, -50%); width: 17%; height: 6%;" onclick="showScreen(10)"></button>
+</div>
+<!-- Экран 6 -->
+<div id="screen6" class="screen">
+  <img src="images/I’m not going to work on Saturday.png" alt="I'm not going to work on Saturday">
+  <!-- Назад -->
+ <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(3)"></button>
+  <!-- Scum -->
+  <button class="hotspot" style="top: 91.2%; left: 50%; transform: translate(-50%, -50%); width: 17%; height: 6%;" onclick="showScreen(11)"></button>
+</div>
+<!-- Экран 7 -->
+<div id="screen7" class="screen">
+  <img src="images/To a bar with friends.png" alt="To a bar with friends">
+  <!-- Назад -->
+   <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(3)"></button>
+  <!-- Scum -->
+  <button class="hotspot" style="top: 91.2%; left: 50%; transform: translate(-50%, -50%); width: 17%; height: 6%;" onclick="showScreen(12)"></button>
+</div>
+<!-- Экран 8 -->
+<div id="screen8" class="screen">
+  <img src="images/feedback.png" alt="Feedback">
+  <!-- Scum -->
+   <button class="hotspot" style="top: 91.2%; left: 50%; transform: translate(-50%, -50%); width: 17%; height: 6%;" onclick="showScreen(15)"></button>
+</div>
+<!-- Экран 9 -->
+<div id="screen9" class="screen">
+  <img src="images/Chief scam 1.png" alt="Chief scam 1">
+  <!-- Назад -->
+  <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(3)"></button>
+</div>
+<!-- Экран 10 -->
+<div id="screen10" class="screen">
+  <img src="images/Friend scam.png" alt="Friend scam">
+  <!-- Назад -->
+  <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(3)"></button>
+</div>
+<!-- Экран 11 -->
+<div id="screen11" class="screen">
+  <img src="images/Chief scam 2.png" alt="Chief scam 2">
+  <!-- Назад -->
+  <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(3)"></button>
+</div>
+<!-- Экран 12 -->
+<div id="screen12" class="screen">
+  <img src="images/Friends bar.png" alt="Friends bar">
+  <!-- Назад -->
+  <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(3)"></button>
+</div>
+<!-- Экран 13 -->
+<div id="screen13" class="screen">
+  <img src="images/Phone loss.png" alt="Phone loss">
+  <!-- Кнопка "Закрыть вкладку" -->
+  <button class="hotspot" style="top: 68.5%; left: 38.5%; transform: translateX(-50%, -50%); width: 8%; height: 3%;" onclick="window.close()"></button>
+</div>
+<!-- Экран 14 -->
+<div id="screen14" class="screen">
+  <img src="images/settings.png" alt="Settings">
+  <!-- Назад -->
+  <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(3)"></button>
+</div>
+<!-- Экран 15 -->
+<div id="screen15" class="screen">
+  <img src="images/Feedback end.png" alt="Feedback end">
+  <!-- Назад -->
+  <button class="hotspot" style="top: 5.5%; left: 39.2%; width: 1.5%; height: 3%;" onclick="showScreen(3)"></button>
+</div>
+<script>
+  function showScreen(number) {
+    for (let i = 1; i <= 15; i++) {
+      document.getElementById('screen' + i).classList.remove('active');
+    }
+    document.getElementById('screen' + number).classList.add('active');
+  }
+  window.showScreen = showScreen;
+</script>
+</body>
+</html>

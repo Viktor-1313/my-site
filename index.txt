@@ -166,7 +166,7 @@
 <div id="screen13" class="screen">
   <div class="frame-wrapper" id="wrapper13">
     <img src="images/Phone_loss.png" alt="Phone loss">
-    <button class="hotspot" style="top: 68%; left: 43.5%; transform: translateX(-50%); width: 10%; height: 3%;" onclick="window.close()"></button>
+    <button class="hotspot" style="top: 90%; left: 50%; transform: translateX(-50%); width: 20%; height: 6%;" onclick="window.close()">Закрыть</button>
   </div>
 </div>
 
@@ -192,7 +192,7 @@
       document.getElementById('screen' + i).classList.remove('active');
     }
     document.getElementById('screen' + number).classList.add('active');
-    setTimeout(updateScale, 100); // Задержка для корректного рендеринга
+    setTimeout(updateScale, 100);
   }
 
   function updateScale() {

@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Гуляй, Вася!</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+      font-family: sans-serif;
+    }
+    .screen {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+    .screen.active {
+      display: flex;
+    }
+    .frame-wrapper {
+      position: absolute;
+      width: 1920px;
+      height: 1080px;
+      transform-origin: top left;
+    }
+    .frame-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .hotspot {
+      position: absolute;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    .hotspot:hover {
+      background-color: rgba(0, 255, 0, 0.3);
+      border: 1px solid rgba(0, 255, 0, 0.6);
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Экран 1 -->
+<div id="screen1" class="screen active">
+  <div class="frame-wrapper" id="wrapper1">
+    <img src="images/Registration_.png" alt="Registration">
+    <!-- Регистрация -->
+    <button class="hotspot" style="top: 850px; left: 960px; transform: translateX(-50%); width: 410px; height: 65px;" onclick="showScreen(2)"></button>
+  </div>
+</div>
+
+<!-- Экран 2 -->
+<div id="screen2" class="screen">
+  <div class="frame-wrapper" id="wrapper2">
+    <img src="images/log_in_to_the_app_.png" alt="Log in to the app">
+    <!-- Гоу ходить -->
+    <button class="hotspot" style="top: 950px; left: 960px; transform: translateX(-50%); width: 410px; height: 65px;" onclick="showScreen(3)"></button>
+  </div>
+</div>
+
+<!-- Экран 3 -->
+<div id="screen3" class="screen">
+  <div class="frame-wrapper" id="wrapper3">
+    <img src="images/choose_a_situation_.png" alt="Choose a situation">
+    <!-- Настройки -->
+    <button class="hotspot" style="top: 50px; left: 750px; width: 29px; height: 32px;" onclick="showScreen(14)"></button>
+    <!-- Кнопка 1 -->
+    <button class="hotspot" style="top: 113px; left: 955px; transform: translateX(-50%); width: 420px; height: 65px;" onclick="showScreen(4)"></button>
+    <!-- Кнопка 2 -->
+    <button class="hotspot" style="top: 211px; left: 955px; transform: translateX(-50%); width: 420px; height: 65px;" onclick="showScreen(5)"></button>
+    <!-- Кнопка 3 -->
+    <button class="hotspot" style="top: 324px; left: 955px; transform: translateX(-50%); width: 420px; height: 65px;" onclick="showScreen(6)"></button>
+    <!-- Кнопка 4 -->
+    <button class="hotspot" style="top: 432px; left: 955px; transform: translateX(-50%); width: 420px; height: 65px;" onclick="showScreen(7)"></button>
+    <!-- Кнопка 5 -->
+    <a href="https://yandex.ru/maps " target="_blank" style="text-decoration: none;">
+    <button class="hotspot" style="top: 540px; left: 955px; transform: translateX(-50%); width: 420px; height: 65px;"></button>
+</a>
+    <!-- Кнопка 6 -->
+    <button class="hotspot" style="top: 648px; left: 955px; transform: translateX(-50%); width: 420px; height: 65px;" onclick="showScreen(8)"></button>
+    <!-- Потерял телефон -->
+    <button class="hotspot" style="bottom: 80px; left: 955px; transform: translateX(-50%); width: 420px; height: 65px;" onclick="showScreen(13)"></button>
+  </div>
+</div>
+
+<!-- Экран 4 -->
+<div id="screen4" class="screen">
+  <div class="frame-wrapper" id="wrapper4">
+    <img src="images/Save_me_from_my_boss_.png" alt="Save me from my boss">
+    <!-- Назад -->
+    <button class="hotspot" style="top: 60px; left: 750px; width: 29px; height: 32px;" onclick="showScreen(3)"></button>
+    <!-- выбрать самую большую пробку -->
+    <a href="https://yandex.ru/maps/2/saint-petersburg/probki/?ll=30.201637%2C59.999568&z=14 " target="_blank" style="text-decoration: none;">
+    <button class="hotspot" style="top: 845px; left: 960px; transform: translateX(-50%); width: 410px; height: 65px;" onclick="showScreen(9)"></button>
+</a>
+    <!-- Scam -->
+    <button class="hotspot" style="top: 950px; left: 960px; transform: translateX(-50%); width: 410px; height: 65px;" onclick="showScreen(9)"></button>
+  </div>
+</div>
+
+<!-- Экран 5 -->
+<div id="screen5" class="screen">
+  <div class="frame-wrapper" id="wrapper5">
+    <img src="images/required_time_.png" alt="Required time">
+    <!-- Назад -->
+    <button class="hotspot" style="top: 60px; left: 750px; width: 29px; height: 32px;" onclick="showScreen(3)"></button>
+    <!-- Scam -->
+    <button class="hotspot" style="top: 950px; left: 960px; transform: translateX(-50%); width: 410px; height: 65px;" onclick="showScreen(10)"></button>
+  </div>
+</div>
+
+
+<!-- Экран 6 -->
+<div id="screen6" class="screen">
+  <div class="frame-wrapper" id="wrapper6">
+    <img src="images/I_m_not_going_to_work_on_Saturday_.png" alt="I'm not going to work on Saturday">
+    <!-- Назад -->
+    <button class="hotspot" style="top: 60px; left: 750px; width: 29px; height: 32px;" onclick="showScreen(3)"></button>
+    <!-- Scum -->
+    <button class="hotspot" style="top: 950px; left: 960px; transform: translateX(-50%); width: 410px; height: 65px;" onclick="showScreen(11)"></button>
+  </div>
+</div>
+
+<!-- Экран 7 -->
+<div id="screen7" class="screen">
+  <div class="frame-wrapper" id="wrapper7">
+    <img src="images/To_a_bar_with_friends_.png" alt="To a bar with friends">
+    <!-- Назад -->
+    <button class="hotspot" style="top: 60px; left: 750px; width: 29px; height: 32px;" onclick="showScreen(3)"></button>
+    <!-- Scum -->
+    <button class="hotspot" style="top: 950px; left: 960px; transform: translateX(-50%); width: 410px; height: 65px;" onclick="showScreen(12)"></button>
+  </div>
+</div>
+
+<!-- Экран 8 -->
+<div id="screen8" class="screen">
+  <div class="frame-wrapper" id="wrapper8">
+    <img src="images/feedback_.png" alt="Feedback">
+    <!-- Scum -->
+    <button class="hotspot" style="top: 950px; left: 960px; transform: translateX(-50%); width: 430px; height: 75px;" onclick="showScreen(15)"></button>
+  </div>
+</div>
+
+<!-- Экран 9 -->
+<div id="screen9" class="screen">
+  <div class="frame-wrapper" id="wrapper9">
+    <img src="images/Chief_scam_1_.png" alt="Chief scam 1">
+    <!-- Назад -->
+    <button class="hotspot" style="top: 60px; left: 750px; width: 29px; height: 32px;" onclick="showScreen(3)"></button>
+    <!-- Вы в пути -->
+    <button class="hotspot" style="top: 750px; left: 830px; transform: translateX(-50%); width: 180px; height: 33px;" onclick="showScreen(25)"></button>
+  </div>
+</div>
+
+
+<!-- Экран 10 -->
+<div id="screen10" class="screen">
+  <div class="frame-wrapper" id="wrapper10">
+    <img src="images/Friendwait.png" alt="Friendwait">
+    <!-- Назад -->
+    <button class="hotspot" style="top: 70px; left: 730px; width: 29px; height: 32px;" onclick="showScreen(3)"></button>
+    <!-- уже в пути -->
+    <button class="hotspot" style="top: 735px; left: 820px; transform: translateX(-50%); width: 180px; height: 33px;" onclick="showScreen(26)"></button>
+  </div>
+</div>
+
+
+
+<!-- Экран 11 -->
+<div id="screen11" class="screen">
+  <div class="frame-wrapper" id="wrapper11">
+    <img src="images/Chief_scam_2_.png" alt="Chief scam 2">
+    <!-- Назад -->
+    <button class="hotspot" style="top: 60px; left: 750px; width: 29px; height: 32px;" onclick="showScreen(3)"></button>
+    <!-- отправить данные -->
+    <button class="hotspot" style="top: 740px; left: 980px; width: 190px; height: 30px;" onclick="showScreen(16)"></button>
+  </div>
+</div>
+
+<!-- Экран 12 -->
+<div id="screen12" class="screen">
+  <div class="frame-wrapper" id="wrapper12">
+    <img src="images/Friends_bar_.png" alt="Friends bar">
+    <!-- Назад -->
+    <button class="hotspot" style="top: 60px; left: 780px; width: 29px; height: 32px;" onclick="showScreen(3)"></button>
+    <!-- вы в баре -->
+    <button class="hotspot" style="top: 745px; left: 730px; width: 180px; height: 30px;" onclick="showScreen(17)"></button>
+    <!-- оставить отзыв -->
+    <button class="hotspot" style="top: 910px; left: 730px; width: 180px; height: 30px;" onclick="showScreen(15)"></button>
+  </div>
+</div>
+
+<!-- Экран 13 -->
+<div id="screen13" class="screen">
+  <div class="frame-wrapper" id="wrapper13">
+    <img src="images/Phone_loss_.png" alt="Phone loss">
+    <!-- потерял -->
+    <button class="hotspot" style="top: 740px; left: 820px; transform: translateX(-50%); width: 180px; height: 33px;" onclick="showScreen(28)"></button>
+  </div>
+</div>
+
+<!-- Экран 14 -->
+<div id="screen14" class="screen">
+  <div class="frame-wrapper" id="wrapper14">
+    <img src="images/settings_.png" alt="Settings">
+    <!-- Назад -->
+    <button class="hotspot" style="top: 90px; left: 750px; width: 29px; height: 32px;" onclick="showScreen(3)"></button>
+  </div>
+</div>
+
+<!-- Экран 15 -->
+<div id="screen15" class="screen">
+  <div class="frame-wrapper" id="wrapper15">
+    <img src="images/Feedback_end_.png" alt="Feedback end">
+    <!-- Назад -->
+    <button class="hotspot" style="top: 60px; left: 750px; width: 29px; height: 32px;" onclick="showScreen(3)"></button>
+    <!-- Отзыв -->
+    <button class="hotspot" style="top: 850px; left: 765px; width: 350px; height: 100px;" onclick="showScreen(27)"></button>
+  </div>
+</div>
+
+<!-- Экран 16 -->
+<div id="screen16" class="screen">
+  <div class="frame-wrapper" id="wrapper16">
+    <img src="images/Chief.png" alt="Chief">
+    <!-- Сидим с котом за столом -->
+    <button class="hotspot" style="top: 730px; left: 740px; width: 430px; height: 50px;" onclick="showScreen(3)"></button>
+  </div>
+</div>
+
+<!-- Экран 17 -->
+<div id="screen17" class="screen">
+  <div class="frame-wrapper" id="wrapper17">
+    <img src="images/1.png" alt="1">
+    <!-- это могли бы быть вы -->
+    <button class="hotspot" style="top: 733px; left: 750px; width: 430px; height: 50px;" onclick="showScreen(18)"></button>
+  </div>
+</div>
+
+<!-- Экран 18 -->
+<div id="screen18" class="screen">
+  <div class="frame-wrapper" id="wrapper18">
+    <img src="images/2.png" alt="2">
+    <!-- но... -->
+    <button class="hotspot" style="top: 733px; left: 750px; width: 430px; height: 50px;" onclick="showScreen(19)"></button>
+  </div>
+</div>
+
+<!-- Экран 19 -->
+<div id="screen19" class="screen">
+  <div class="frame-wrapper" id="wrapper19">
+    <img src="images/3.png" alt="3">
+    <!-- но... -->
+    <button class="hotspot" style="top: 733px; left: 750px; width: 430px; height: 50px;" onclick="showScreen(20)"></button>
+  </div>
+</div>
+
+
+<!-- Экран 20 -->
+<div id="screen20" class="screen">
+  <div class="frame-wrapper" id="wrapper20">
+    <img src="images/4.png" alt="4">
+    <!-- выбрал быть счастливым -->
+    <button class="hotspot" style="top: 733px; left: 750px; width: 430px; height: 50px;" onclick="showScreen(21)"></button>
+  </div>
+</div>
+
+<!-- Экран 21 -->
+<div id="screen21" class="screen">
+  <div class="frame-wrapper" id="wrapper21">
+    <img src="images/5.png" alt="5">
+    <!-- выбрал быть счастливым -->
+    <button class="hotspot" style="top: 733px; left: 750px; width: 430px; height: 50px;" onclick="showScreen(23)"></button>
+  </div>
+</div>
+
+
+<!-- Экран 23 -->
+<div id="screen23" class="screen">
+  <div class="frame-wrapper" id="wrapper23">
+    <img src="images/6.png" alt="6">
+    <!-- друг -->
+    <button class="hotspot" style="top: 733px; left: 750px; width: 430px; height: 50px;" onclick="showScreen(24)"></button>
+  </div>
+</div>
+
+<!-- Экран 24 -->
+<div id="screen24" class="screen">
+  <div class="frame-wrapper" id="wrapper24">
+    <img src="images/7.png" alt="7">
+    <!-- непьющий друг -->
+    <button class="hotspot" style="top: 733px; left: 750px; width: 430px; height: 50px;" onclick="showScreen(3)"></button>
+  </div>
+</div>
+
+
+<!-- Экран 25 -->
+<div id="screen25" class="screen">
+  <div class="frame-wrapper" id="wrapper25">
+    <img src="images/Car.png" alt="Car">
+    <!-- Я на работу -->
+    <button class="hotspot" style="top: 730px; left: 770px; width: 400px; height: 50px;" onclick="showScreen(3)"></button>
+  </div>
+</div>
+
+
+<!-- Экран 26 -->
+<div id="screen26" class="screen">
+  <div class="frame-wrapper" id="wrapper26">
+    <img src="images/Frienddrink.png" alt="Frienddrink">
+    <!-- я в моменте -->
+    <button class="hotspot" style="top: 730px; left: 770px; width: 400px; height: 50px;" onclick="showScreen(3)"></button>
+  </div>
+</div>
+
+<!-- Экран 27 -->
+<div id="screen27" class="screen">
+  <div class="frame-wrapper" id="wrapper27">
+    <img src="images/Thankyou.png" alt="Thankyou">
+    <!-- спасибо -->
+    <button class="hotspot" style="top: 730px; left: 770px; width: 400px; height: 50px;" onclick="showScreen(3)"></button>
+  </div>
+</div>
+
+<div id="screen28" class="screen" onclick="window.close()" style="cursor: pointer;">
+  <div class="frame-wrapper" id="wrapper28">
+    <img src="images/End.png" alt="End">
+  </div>
+</div>
+
+<script>
+  function showScreen(number) {
+    for (let i = 1; i <= 28; i++) { // Исправлено: было 24, стало 28
+      const screen = document.getElementById('screen' + i);
+      if (screen) {
+        screen.classList.remove('active');
+      }
+    }
+    const currentScreen = document.getElementById('screen' + number);
+    if (currentScreen) {
+      currentScreen.classList.add('active');
+      setTimeout(updateScale, 100);
+    }
+  }
+
+  function updateScale() {
+    const wrappers = document.querySelectorAll('.frame-wrapper');
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const scale = Math.min(vw / 1920, vh / 1080);
+    wrappers.forEach(wrapper => {
+      wrapper.style.transform = `scale(${scale})`;
+      wrapper.style.left = `${(vw - 1920 * scale) / 2}px`;
+      wrapper.style.top = `${(vh - 1080 * scale) / 2}px`;
+    });
+  }
+
+  window.addEventListener('resize', updateScale);
+  window.addEventListener('load', updateScale);
+</script>
+</body>
+</html>
